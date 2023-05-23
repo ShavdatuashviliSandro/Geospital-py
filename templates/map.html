@@ -3,27 +3,33 @@
     <title>Geospital APP</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="../assets/map.css">
 </head>
 <body>
 <br>
 <center>
     <h4> Geospital app with Redis & Python </h4>
     <br>
-    <div style="width: 86%; height: 500px; margin-left: 7%" id="map"></div>
+    <div style="width: 86%; height: 450px; margin-left: 7%" id="map"></div>
     <br>
     <h4>Search Country by Coordinates</h4>
-    <form class="form-details" action="/add-marker" method="POST">
-        <br>
-        <label for="name" class="textbox">Name</label>
-        <input type="text" name="lname"><br><br>
-        <label for="latitude" class="textbox">Latitude</label>
-        <input type="number" step=any name="latitude"><br><br>
-        <label for="longitude" class="textbox">Longitude</label>
-        <input type="number" step=any name="longitude"><br><br>
-        <button class="btn btn-lg btn-primary btn-block" style="width: 300px" type="submit">Submit</button>
-        <br>
+
+    <form class="form-details" action="/add-marker" method="POST" style="width: 70%">
+        <div class="form-group">
+            <label for="name" class="textbox">Name</label>
+            <input type="text" name="lname" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="latitude" class="textbox">Latitude</label>
+            <input type="number" step="any" name="latitude" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="longitude" class="textbox">Longitude</label>
+            <input type="number" step="any" name="longitude" class="form-control">
+        </div>
+        <button class="btn btn-outline-success" style="width: 300px" type="submit">Submit</button>
     </form>
+
+
 </center>
 <script src="https://maps.googleapis.com/maps/api/js?callback=initMap&libraries=&v=weekly" async></script>
 <script>

@@ -48,7 +48,7 @@ def data():
 
 @app.route("/last")
 def last_loc():
-    return r.get('las_loc_name').decode('utf-8')
+    return r.get('last_loc_name').decode('utf-8')
 
 
 if __name__ == '__main__':
